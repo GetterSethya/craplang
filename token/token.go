@@ -7,12 +7,12 @@ const (
 	IDENT = "IDENT"
 	INT   = "INT"
 
-	ASSIGN     = "="
-	PLUS       = "+"
-	MINUS      = "-"
-	EXCAMATION = "!"
-	ASTERISK   = "*"
-	SLASH      = "/"
+	ASSIGN      = "="
+	PLUS        = "+"
+	MINUS       = "-"
+	EXCLAMATION = "!"
+	ASTERISK    = "*"
+	SLASH       = "/"
 
 	LT = "<"
 	GT = ">"

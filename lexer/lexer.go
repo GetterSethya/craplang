@@ -60,7 +60,7 @@ func (l *Lexer) NextToken() token.Token {
 				Type: token.NOT_EQ, Literal: string(ch) + string(l.ch)}
 		} else {
 
-			tok = newToken(token.EXCAMATION, l.ch)
+			tok = newToken(token.EXCLAMATION, l.ch)
 		}
 	case '/':
 		tok = newToken(token.SLASH, l.ch)
