@@ -7,7 +7,7 @@ import (
 	"testing"
 )
 
-func TestLetStatement(t *testing.T) {
+func TestLetStatements(t *testing.T) {
 	tests := []struct {
 		input              string
 		expectedIdentifier string
