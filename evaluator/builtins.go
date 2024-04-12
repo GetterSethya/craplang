@@ -1,6 +1,9 @@
 package evaluator
 
-import "crapLang/object"
+import (
+	"crapLang/object"
+	"fmt"
+)
 
 var builtins = map[string]*object.Builtin{
 	"len": {
@@ -119,6 +122,15 @@ var builtins = map[string]*object.Builtin{
 
 			return &object.Array{Elements: newElements}
 
+		},
+	},
+	"writeln": {
+		Fn: func(args ...object.Object) object.Object {
+			for _, arg := range args {
+				fmt.Printf("%+v\n", arg.Inspect())
+			}
+
+			return nil
 		},
 	},
 }
