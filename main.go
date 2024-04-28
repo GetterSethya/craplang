@@ -5,12 +5,19 @@ import (
 	"crapLang/repl"
 	"fmt"
 	"os"
+	"path/filepath"
 )
 
 func main() {
 
 	args := os.Args
 	if len(args) > 1 {
+        // cek file extension apakah .crap
+		fileExtensions := filepath.Ext(args[1])
+		if fileExtensions != ".crap" {
+			fmt.Printf("error: %+v is not supported\n", fileExtensions)
+            return
+		}
 		// buka file
 		// input ke std in
 		file, err := os.Open(args[1])
